@@ -237,6 +237,19 @@
     display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
   }
   .footer-links { display: flex; gap: 20px; }
+
+  .legal-section {
+    background: var(--cream-2);
+    border-top: 1px solid var(--sand-line);
+    padding: 44px 24px;
+    scroll-margin-top: 90px;
+  }
+  .legal-inner { max-width: 640px; }
+  .legal-section h3 { font-size: 20px; margin-bottom: 16px; }
+  .legal-section p { font-size: 14.5px; color: var(--ink-soft); margin-bottom: 12px; line-height: 1.65; }
+  .legal-section p:last-child { margin-bottom: 0; }
+  .legal-section a { text-decoration: underline; text-underline-offset: 2px; color: var(--ink-soft); }
+  .legal-note { font-size: 13px; opacity: 0.85; }
 </style>
 </head>
 <body>
@@ -397,11 +410,37 @@
   <div class="footer-inner">
     <div>© <span id="year"></span> Ergotherapie Hilpert</div>
     <div class="footer-links">
-      <a href="#">Impressum</a>
-      <a href="#">Datenschutz</a>
+      <a href="#impressum">Impressum</a>
+      <a href="#datenschutz">Datenschutz</a>
     </div>
   </div>
 </footer>
+
+<section id="impressum" class="legal-section">
+  <div class="section-inner legal-inner">
+    <h3>Impressum</h3>
+    <p><strong>Verantwortlich für den Inhalt dieser Website:</strong></p>
+    <p>
+      Naomi Hilpert<br>
+      Ergotherapie Hilpert (Einzelunternehmen)<br>
+      Baslerstrasse 20, 4665 Oftringen<br>
+      Telefon: <a href="tel:+41764651215">+41 76 465 12 15</a><br>
+      E-Mail: <a href="mailto:naomi.hilpert@hin.ch">naomi.hilpert@hin.ch</a>
+    </p>
+    <p>Ergotherapeutin FH (BSc Ergotherapie, ZHAW)</p>
+    <p class="legal-note">Haftungsausschluss: Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer Links (z.B. Google Maps). Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.</p>
+  </div>
+</section>
+
+<section id="datenschutz" class="legal-section">
+  <div class="section-inner legal-inner">
+    <h3>Datenschutz</h3>
+    <p>Diese Website erhebt, speichert oder verarbeitet keine personenbezogenen Daten von Besucherinnen und Besuchern. Es werden keine Cookies gesetzt und keine Analyse- oder Trackingtools eingesetzt.</p>
+    <p>Der Kontakt erfolgt ausschliesslich über die E-Mail- und Telefon-Links auf dieser Seite; die von Ihnen übermittelten Angaben (z.B. Name, Anliegen) werden direkt an mein E-Mail-Postfach bzw. Telefon übertragen und nicht auf dieser Website gespeichert.</p>
+    <p>Der Link zur Adresse führt zu Google Maps. Beim Anklicken verlassen Sie diese Website; es gilt die Datenschutzerklärung von Google.</p>
+    <p>Bei Fragen zum Datenschutz erreichen Sie mich unter <a href="mailto:naomi.hilpert@hin.ch">naomi.hilpert@hin.ch</a>.</p>
+  </div>
+</section>
 
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
