@@ -307,6 +307,23 @@
   .legal-section p:last-child { margin-bottom: 0; }
   .legal-section a { text-decoration: underline; text-underline-offset: 2px; color: var(--ink-soft); }
   .legal-note { font-size: 13px; opacity: 0.85; }
+
+  .form-download-card {
+    background: var(--surface); border: 1px solid var(--sand-line);
+    border-radius: var(--radius-lg, 22px);
+    padding: 34px 38px;
+    display: flex; align-items: center; justify-content: space-between; gap: 30px;
+    box-shadow: var(--shadow-md, 0 4px 12px rgba(0,0,0,0.06));
+  }
+  .form-download-card .eyebrow { margin-bottom: 10px; }
+  .form-download-card h2 { font-size: 24px; margin-bottom: 10px; }
+  .form-download-card p { color: var(--ink-soft); font-size: 15px; max-width: 46ch; }
+  .form-download-card .btn { white-space: nowrap; flex-shrink: 0; }
+
+  @media (max-width: 700px) {
+    .form-download-card { flex-direction: column; align-items: flex-start; padding: 28px 26px; }
+    .form-download-card .btn { width: 100%; justify-content: center; }
+  }
 </style>
 </head>
 <body>
@@ -427,6 +444,22 @@
     </div>
   </section>
 
+  <!-- VERORDNUNG FÜR ÄRZTE -->
+  <section id="verordnung">
+    <div class="section-inner">
+      <div class="form-download-card">
+        <div>
+          <div class="eyebrow">Für Ärztinnen & Ärzte</div>
+          <h2>Verordnungsformular</h2>
+          <p>Möchten Sie eine Patientin oder einen Patienten zur Ergotherapie zuweisen? Hier finden Sie das Verordnungsformular mit meiner Praxisadresse, bereit zum direkten Download und Ausdrucken.</p>
+        </div>
+        <a href="downloads/Verordnung-Ergotherapie-Hilpert.pdf" class="btn btn-primary" download>
+          <i class="ti ti-download"></i> PDF herunterladen
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- PRAXIS / CONTACT -->
   <section id="praxis">
     <div class="band" id="kontakt">
@@ -467,6 +500,7 @@
   <div class="footer-inner">
     <div>© <span id="year"></span> Ergotherapie Hilpert</div>
     <div class="footer-links">
+      <a href="#verordnung">Verordnungsformular</a>
       <a href="#impressum">Impressum</a>
       <a href="#datenschutz">Datenschutz</a>
     </div>
