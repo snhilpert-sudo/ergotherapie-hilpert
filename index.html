@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ergotherapie Hilpert – Praxis für mehr Selbständigkeit im Alltag</title>
 <link rel="canonical" href="https://ergotherapie-hilpert.ch/">
-<meta name="description" content="Ergotherapie Hilpert in Oftringen – Neurologische Ergotherapie, Domizilbehandlungen, Alters- & Pflegeheime und Basale Stimulation für die Region Zofingen, Aarburg, Rothrist, Strengelbach und den Kanton Aargau.">
+<meta name="description" content="Ergotherapie Hilpert in Oftringen – Neurologie, Geriatrie, Domizilbehandlungen, Alters- & Pflegeheime und ambulante Therapie im Praxisraum für den Bezirk Zofingen (Aarburg, Rothrist, Strengelbach, Reitnau, Vordemwald u.a.) und weitere Gemeinden im Kanton Aargau.">
 
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -14,7 +14,7 @@
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ergotherapie Hilpert – Praxis für mehr Selbständigkeit im Alltag">
-<meta property="og:description" content="Individuelle Ergotherapie in Oftringen für die Region Zofingen, Aarburg, Rothrist, Strengelbach und den Kanton Aargau: Neurologische Ergotherapie, Domizilbehandlungen, Alters- & Pflegeheime, Basale Stimulation.">
+<meta property="og:description" content="Individuelle Ergotherapie in Oftringen für den Bezirk Zofingen und weitere Gemeinden im Kanton Aargau: Neurologie, Geriatrie, Domizilbehandlungen, Alters- & Pflegeheime, ambulante Therapie im Praxisraum.">
 <meta property="og:image" content="https://ergotherapie-hilpert.ch/images/logo-ergotherapie-hilpert.png">
 <meta name="twitter:card" content="summary">
 
@@ -37,11 +37,24 @@
     "addressCountry": "CH"
   },
   "areaServed": [
+    {"@type": "AdministrativeArea", "name": "Bezirk Zofingen"},
     {"@type": "City", "name": "Oftringen"},
     {"@type": "City", "name": "Zofingen"},
     {"@type": "City", "name": "Aarburg"},
+    {"@type": "City", "name": "Bottenwil"},
+    {"@type": "City", "name": "Brittnau"},
+    {"@type": "City", "name": "Kirchleerau"},
+    {"@type": "City", "name": "Kölliken"},
+    {"@type": "City", "name": "Moosleerau"},
+    {"@type": "City", "name": "Murgenthal"},
+    {"@type": "City", "name": "Reitnau"},
     {"@type": "City", "name": "Rothrist"},
+    {"@type": "City", "name": "Safenwil"},
+    {"@type": "City", "name": "Staffelbach"},
     {"@type": "City", "name": "Strengelbach"},
+    {"@type": "City", "name": "Uerkheim"},
+    {"@type": "City", "name": "Vordemwald"},
+    {"@type": "City", "name": "Wiliberg"},
     {"@type": "AdministrativeArea", "name": "Kanton Aargau"}
   ],
   "openingHoursSpecification": [
@@ -95,7 +108,7 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, h3, .display {
+  h1, h2, h3, h4, .display {
     font-family: 'Fraunces', serif;
     font-weight: 500;
     color: var(--sage-dark);
@@ -241,8 +254,22 @@
     display: flex; align-items: center; justify-content: center;
     margin-bottom: 18px; font-size: 21px;
   }
-  .service-card h3 { font-size: 18px; margin-bottom: 8px; }
+  .service-card h4 { font-size: 18px; margin-bottom: 8px; }
   .service-card p { font-size: 14.5px; color: var(--ink-soft); }
+
+  .versorgungsgebiet {
+    font-size: 13.5px; color: var(--ink-soft); opacity: 0.85;
+    margin-top: 24px; line-height: 1.65; max-width: 68ch;
+  }
+
+  .leistungen-group { margin-bottom: 42px; }
+  .leistungen-group:last-child { margin-bottom: 0; }
+  .leistungen-subhead {
+    font-family: 'Karla', sans-serif;
+    font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--sage); margin-bottom: 20px; padding-bottom: 10px;
+    border-bottom: 1px solid var(--sand-line);
+  }
 
   @media (max-width: 900px) {
     .about-grid { grid-template-columns: 1fr; }
@@ -365,9 +392,9 @@
   <section class="hero">
     <div class="hero-inner">
       <div>
-        <div class="eyebrow">Ergotherapie in Oftringen & Region Zofingen</div>
+        <div class="eyebrow">Ergotherapie in Oftringen & Bezirk Zofingen</div>
         <h1>Mehr Selbständigkeit<br>für Ihren Alltag.</h1>
-        <p class="lead">Ich bin Naomi Hilpert, Ergotherapeutin in Oftringen. Ich begleite Sie mit individueller Ergotherapie – nach Unfall oder Erkrankung, bei chronischen Beschwerden oder zur Prävention. Persönlich, in meiner Praxis oder bei Ihnen zu Hause.</p>
+        <p class="lead">Ich bin Naomi Hilpert, Ergotherapeutin in Oftringen. Ich begleite Sie mit individueller Ergotherapie – nach Unfall, bei Erkrankung oder chronischen Beschwerden. Persönlich, in meiner Praxis oder bei Ihnen zu Hause.</p>
         <div class="hero-ctas">
           <a href="#kontakt" class="btn btn-primary">Termin anfragen</a>
           <a href="#leistungen" class="btn btn-outline">Leistungen ansehen</a>
@@ -402,8 +429,8 @@
       <div class="about-grid">
         <img class="portrait" src="images/naomi_portrait.jpg" alt="Porträt von Naomi Hilpert">
         <div class="about-text">
-          <p class="intro">Ich habe an der ZHAW Ergotherapie studiert und mein Herz schlägt besonders für die Neurorehabilitation – ein Schwerpunkt, den ich mir während mehrerer Jahre in der Reha Rheinfelden angeeignet habe. Davor durfte ich in der Neurologie des Inselspitals Bern und in der Handtherapie am Kantonsspital Aarau wertvolle Erfahrungen sammeln. Mit der Eröffnung meiner eigenen Praxis widme ich mich nun ganz meinen Patientinnen und Patienten in Oftringen und Umgebung.</p>
-          <p class="intro">Für mich ist Ergotherapie mehr als ein Beruf – es geht darum, Menschen in oft herausfordernden Momenten zur Seite zu stehen und gemeinsam kleine und grosse Erfolge zu feiern. Jede Person bringt ihre eigene Geschichte mit, und genau das macht meine Arbeit so bereichernd.</p>
+          <p class="intro">Ich habe an der ZHAW Ergotherapie studiert, und mein Herz schlägt besonders für die Neurorehabilitation – ein Schwerpunkt, den ich während mehrerer Jahre in der Reha Rheinfelden vertiefen konnte. Davor durfte ich in der Neurologie des Inselspitals Bern und in der Handtherapie am Kantonsspital Aarau wertvolle Erfahrungen sammeln. Mit der Eröffnung meiner eigenen Praxis widme ich mich nun ganz meinen Patientinnen und Patienten in Oftringen und Umgebung.</p>
+          <p class="intro">Für mich ist Ergotherapie weit mehr als ein Beruf – es bedeutet, Menschen in herausfordernden Lebenssituationen zu begleiten und sie auf ihrem Weg zu mehr Selbstständigkeit im Alltag zu unterstützen. Besonders erfüllend ist es für mich, mitzuerleben, wie auch kleine Fortschritte und wiedergewonnene Fähigkeiten den Alltag eines Menschen positiv verändern können. Jede Person bringt ihre eigene Geschichte und individuellen Bedürfnisse mit – genau diese Vielfalt macht meine Arbeit für mich so wertvoll und bereichernd.</p>
           <p class="intro">Ich freue mich, wenn ich Sie – ob in meiner Praxis, bei Ihnen zu Hause oder im Heim – auf Ihrem Weg zu mehr Selbständigkeit begleiten darf.</p>
         </div>
       </div>
@@ -418,32 +445,49 @@
         <h2>Individuelle Therapie für jede Lebensphase</h2>
         <p>Alle Leistungen werden nach ärztlicher Verordnung durchgeführt und über die Grundversicherung (KVG), die Unfallversicherung (UVG) oder weitere Sozialversicherungen abgerechnet.</p>
       </div>
-      <div class="services-grid">
+      <div class="leistungen-group">
+        <h3 class="leistungen-subhead">Fachbereiche</h3>
+        <div class="services-grid">
 
-        <div class="service-card">
-          <div class="service-icon"><i class="ti ti-brain"></i></div>
-          <h3>Neurologische Ergotherapie</h3>
-          <p>Training von Alltagsfähigkeiten, Kognition und Sprache für Erwachsene mit neurologischen Erkrankungen, z.B. nach einem Schlaganfall.</p>
+          <div class="service-card">
+            <div class="service-icon"><i class="ti ti-brain"></i></div>
+            <h4>Neurologie</h4>
+            <p>Training von Alltagsfähigkeiten, Training der motorischen und sensorischen Funktionen, Hirnleistungstraining und Hilfsmittelberatung für Erwachsene mit neurologischen Erkrankungen, z.B. nach einem Schlaganfall.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="ti ti-walk"></i></div>
+            <h4>Geriatrie</h4>
+            <p>Training alltagsrelevanter körperlicher und kognitiver Fähigkeiten, Training von motorischen und sensorischen Funktionen, Unterstützung bei der Anpassung des Zuhauses sowie der Wahl der Hilfsmittel, Beratung und Umsetzung gesundheitsfördernder Aktivitäten, welche die Lebensqualität steigern.</p>
+          </div>
+
         </div>
+      </div>
 
-        <div class="service-card">
-          <div class="service-icon"><i class="ti ti-home"></i></div>
-          <h3>Domizilbehandlungen</h3>
-          <p>Therapie bei Ihnen zu Hause – in Oftringen und der Region Zofingen, Aarburg, Rothrist, Strengelbach sowie im Kanton Aargau.</p>
+      <div class="leistungen-group">
+        <h3 class="leistungen-subhead">Behandlungsorte</h3>
+        <div class="services-grid">
+
+          <div class="service-card">
+            <div class="service-icon"><i class="ti ti-home"></i></div>
+            <h4>Domizilbehandlungen</h4>
+            <p>Therapie bei Ihnen zu Hause – ich bin im ganzen Bezirk Zofingen unterwegs.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="ti ti-building-community"></i></div>
+            <h4>Alters- & Pflegeheime</h4>
+            <p>Ergotherapeutische Betreuung direkt vor Ort, in enger Zusammenarbeit mit dem Pflegeteam.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="service-icon"><i class="ti ti-stethoscope"></i></div>
+            <h4>Ambulante Therapie im Praxisraum</h4>
+            <p>Behandlung auch direkt bei mir im Gesundheitshaus Oftringen möglich.</p>
+          </div>
+
         </div>
-
-        <div class="service-card">
-          <div class="service-icon"><i class="ti ti-building-community"></i></div>
-          <h3>Alters- & Pflegeheime</h3>
-          <p>Ergotherapeutische Betreuung direkt vor Ort, in enger Zusammenarbeit mit dem Pflegeteam.</p>
-        </div>
-
-        <div class="service-card">
-          <div class="service-icon"><i class="ti ti-hand-stop"></i></div>
-          <h3>Basale Stimulation</h3>
-          <p>Sanfte Förderung über die Sinne für Menschen mit stark eingeschränkter Wahrnehmung, z.B. bei fortgeschrittener Demenz.</p>
-        </div>
-
+        <p class="versorgungsgebiet">Für Domizilbehandlungen bin ich im ganzen Bezirk Zofingen unterwegs – u.a. in Aarburg, Bottenwil, Brittnau, Kirchleerau, Kölliken, Moosleerau, Murgenthal, Oftringen, Reitnau, Rothrist, Safenwil, Staffelbach, Strengelbach, Uerkheim, Vordemwald, Wiliberg und Zofingen.</p>
       </div>
     </div>
   </section>
