@@ -74,12 +74,47 @@
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="preload" href="fonts/karla-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/fraunces-variable.woff2" as="font" type="font/woff2" crossorigin>
 
 <style>
+  /* ── SCHRIFTEN (lokal gehostet, keine Verbindung zu Google) ── */
+  @font-face {
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url('fonts/fraunces-variable.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Karla';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+    src: url('fonts/karla-400.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Karla';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 500;
+    src: url('fonts/karla-500.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Karla';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 600;
+    src: url('fonts/karla-600.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Karla';
+    font-style: normal;
+    font-display: swap;
+    font-weight: 700;
+    src: url('fonts/karla-700.woff2') format('woff2');
+  }
+
   :root {
     --cream: #F6F1E6;
     --cream-2: #EFE8D9;
@@ -111,6 +146,7 @@
   h1, h2, h3, h4, .display {
     font-family: 'Fraunces', serif;
     font-weight: 500;
+    font-optical-sizing: auto;
     color: var(--sage-dark);
     letter-spacing: -0.01em;
   }
@@ -118,6 +154,9 @@
   a { color: inherit; text-decoration: none; }
 
   .wrap { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+  /* Icons (Tabler Icons, MIT-Lizenz, als Inline-SVG eingebunden) */
+  .icon { width: 1em; height: 1em; flex-shrink: 0; }
 
   /* ── NAV ─────────────────────────────────────────── */
   header.site {
@@ -199,6 +238,7 @@
     padding: 14px 26px; border-radius: 99px; font-weight: 600; font-size: 15px;
     transition: transform .15s ease, box-shadow .15s ease;
   }
+  .btn .icon { font-size: 18px; }
   .btn-primary { background: var(--sage-dark); color: #fff; }
   .btn-primary:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(71,82,59,0.25); }
   .btn-outline { border: 1.5px solid var(--sage-dark); color: var(--sage-dark); }
@@ -334,6 +374,10 @@
   }
   .legal-inner { max-width: 640px; }
   .legal-section h3 { font-size: 20px; margin-bottom: 16px; }
+  .legal-section h4 {
+    font-family: 'Karla', sans-serif; font-size: 14.5px; font-weight: 700;
+    color: var(--ink); letter-spacing: 0; margin: 20px 0 6px;
+  }
   .legal-section p { font-size: 14.5px; color: var(--ink-soft); margin-bottom: 12px; line-height: 1.65; }
   .legal-section p:last-child { margin-bottom: 0; }
   .legal-section a { text-decoration: underline; text-underline-offset: 2px; color: var(--ink-soft); }
@@ -450,13 +494,17 @@
         <div class="services-grid">
 
           <div class="service-card">
-            <div class="service-icon"><i class="ti ti-brain"></i></div>
+            <div class="service-icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15.5 13a3.5 3.5 0 0 0 -3.5 3.5v1a3.5 3.5 0 0 0 7 0v-1.8"/><path d="M8.5 13a3.5 3.5 0 0 1 3.5 3.5v1a3.5 3.5 0 0 1 -7 0v-1.8"/><path d="M17.5 16a3.5 3.5 0 0 0 0 -7h-.5"/><path d="M19 9.3v-2.8a3.5 3.5 0 0 0 -7 0"/><path d="M6.5 16a3.5 3.5 0 0 1 0 -7h.5"/><path d="M5 9.3v-2.8a3.5 3.5 0 0 1 7 0v10"/></svg>
+            </div>
             <h4>Neurologie</h4>
             <p>Training von Alltagsfähigkeiten, Training der motorischen und sensorischen Funktionen, Hirnleistungstraining und Hilfsmittelberatung für Erwachsene mit neurologischen Erkrankungen, z.B. nach einem Schlaganfall.</p>
           </div>
 
           <div class="service-card">
-            <div class="service-icon"><i class="ti ti-walk"></i></div>
+            <div class="service-icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M7 21l3 -4"/><path d="M16 21l-2 -4l-3 -3l1 -6"/><path d="M6 12l2 -3l4 -1l3 3l3 1"/></svg>
+            </div>
             <h4>Geriatrie</h4>
             <p>Training alltagsrelevanter körperlicher und kognitiver Fähigkeiten, Training von motorischen und sensorischen Funktionen, Unterstützung bei der Anpassung des Zuhauses sowie der Wahl der Hilfsmittel, Beratung und Umsetzung gesundheitsfördernder Aktivitäten, welche die Lebensqualität steigern.</p>
           </div>
@@ -469,19 +517,25 @@
         <div class="services-grid">
 
           <div class="service-card">
-            <div class="service-icon"><i class="ti ti-home"></i></div>
+            <div class="service-icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l-2 0l9 -9l9 9l-2 0"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg>
+            </div>
             <h4>Domizilbehandlungen</h4>
             <p>Therapie bei Ihnen zu Hause – ich bin im ganzen Bezirk Zofingen unterwegs.</p>
           </div>
 
           <div class="service-card">
-            <div class="service-icon"><i class="ti ti-building-community"></i></div>
+            <div class="service-icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 9l5 5v7h-5v-4m0 4h-5v-7l5 -5m1 1v-6a1 1 0 0 1 1 -1h10a1 1 0 0 1 1 1v17h-8"/><path d="M13 7l0 .01"/><path d="M17 7l0 .01"/><path d="M17 11l0 .01"/><path d="M17 15l0 .01"/></svg>
+            </div>
             <h4>Alters- & Pflegeheime</h4>
             <p>Ergotherapeutische Betreuung direkt vor Ort, in enger Zusammenarbeit mit dem Pflegeteam.</p>
           </div>
 
           <div class="service-card">
-            <div class="service-icon"><i class="ti ti-stethoscope"></i></div>
+            <div class="service-icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 4h-1a2 2 0 0 0 -2 2v3.5a5.5 5.5 0 0 0 11 0v-3.5a2 2 0 0 0 -2 -2h-1"/><path d="M8 15a6 6 0 1 0 12 0v-3"/><path d="M11 3v2"/><path d="M6 3v2"/><path d="M18 10a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/></svg>
+            </div>
             <h4>Ambulante Therapie im Praxisraum</h4>
             <p>Behandlung auch direkt bei mir im Gesundheitshaus Oftringen möglich.</p>
           </div>
@@ -502,7 +556,8 @@
           <p>Möchten Sie eine Patientin oder einen Patienten zur Ergotherapie zuweisen? Hier finden Sie das Verordnungsformular mit meiner Praxisadresse, bereit zum direkten Download und Ausdrucken.</p>
         </div>
         <a href="downloads/Verordnung-Ergotherapie-Hilpert.pdf" class="btn btn-primary" download>
-          <i class="ti ti-download"></i> PDF herunterladen
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2"/><path d="M7 11l5 5l5 -5"/><path d="M12 4l0 12"/></svg>
+          PDF herunterladen
         </a>
       </div>
     </div>
@@ -566,17 +621,29 @@
       E-Mail: <a href="mailto:naomi.hilpert@hin.ch">naomi.hilpert@hin.ch</a>
     </p>
     <p>Ergotherapeutin FH (BSc Ergotherapie, ZHAW)</p>
-    <p class="legal-note">Haftungsausschluss: Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer Links (z.B. Google Maps). Für den Inhalt der verlinkten Seiten sind ausschliesslich deren Betreiber verantwortlich.</p>
   </div>
 </section>
 
 <section id="datenschutz" class="legal-section">
   <div class="section-inner legal-inner">
     <h3>Datenschutz</h3>
-    <p>Diese Website erhebt, speichert oder verarbeitet keine personenbezogenen Daten von Besucherinnen und Besuchern. Es werden keine Cookies gesetzt und keine Analyse- oder Trackingtools eingesetzt.</p>
-    <p>Der Kontakt erfolgt ausschliesslich über die E-Mail- und Telefon-Links auf dieser Seite; die von Ihnen übermittelten Angaben (z.B. Name, Anliegen) werden direkt an mein E-Mail-Postfach bzw. Telefon übertragen und nicht auf dieser Website gespeichert.</p>
-    <p>Der Link zur Adresse führt zu Google Maps. Beim Anklicken verlassen Sie diese Website; es gilt die Datenschutzerklärung von Google.</p>
-    <p>Bei Fragen zum Datenschutz erreichen Sie mich unter <a href="mailto:naomi.hilpert@hin.ch">naomi.hilpert@hin.ch</a>.</p>
+
+    <h4>Verantwortlich</h4>
+    <p>
+      Naomi Hilpert, Ergotherapie Hilpert<br>
+      Baslerstrasse 20, 4665 Oftringen<br>
+      E-Mail: <a href="mailto:naomi.hilpert@hin.ch">naomi.hilpert@hin.ch</a><br>
+      Telefon: <a href="tel:+41782424894">+41 78 242 48 94</a>
+    </p>
+
+    <h4>Besuch dieser Website</h4>
+    <p>Beim Aufruf dieser Website werden technisch notwendige Zugriffsdaten (z.B. IP-Adresse, Datum und Uhrzeit, Browsertyp) vom Hosting-Anbieter Hostpoint AG (Schweiz) in Server-Logfiles gespeichert. Diese Daten dienen ausschliesslich dem sicheren und stabilen Betrieb der Website. Es werden keine Cookies gesetzt, keine Analyse- oder Trackingtools eingesetzt und keine Inhalte von Drittanbietern geladen.</p>
+
+    <h4>Kontaktaufnahme</h4>
+    <p>Wenn Sie mich per E-Mail oder Telefon kontaktieren, bearbeite ich Ihre Angaben (z.B. Name, Kontaktdaten, Anliegen) nur zur Beantwortung Ihrer Anfrage und zur Terminvereinbarung. Mein E-Mail-Dienst wird von der Health Info Net AG (HIN, Schweiz) betrieben. Bitte beachten Sie, dass E-Mails von Absendern ausserhalb des HIN-Netzwerks unverschlüsselt übertragen werden.</p>
+
+    <h4>Externe Links</h4>
+    <p>Der Adresslink führt zu Google Maps. Beim Anklicken verlassen Sie diese Website; es gilt die Datenschutzerklärung von Google.</p>
   </div>
 </section>
 
